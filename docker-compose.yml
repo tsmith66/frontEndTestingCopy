@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    api:
+        image: jeffrygonzalez/ng-testing-movies-api:latest
+        ports:
+            - 80:80
+        environment:
+            - ConnectionStrings__movies=server=sql;database=movies;user=SA;password=TokyoJoe138!
+    sql:
+        image: jeffrygonzalez/ng-test-movies-db:latest
+        ports:
+            - 1433:1433

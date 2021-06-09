@@ -1,0 +1,12 @@
+<header>
+  <h2 class="text-lg font-bold">Movies!</h2>
+</header>
+<nav class="flex">
+  <a class="bg-gray-500 text-white m-r-4"
+     [routerLink]="['raw']">Raw API Access</a>
+  <a class="bg-gray-500 text-white m4"
+     [routerLink]="['redux']">Movies Redux</a>
+</nav>
+<section>
+  <router-outlet></router-outlet>
+</section>

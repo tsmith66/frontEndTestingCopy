@@ -1,0 +1,14 @@
+<div data-movies-raw>
+  <div data-movies-raw-error
+       *ngIf="hasError">
+    Sorry! There was error!
+  </div>
+
+  <ul data-movies-raw-list
+      *ngIf="!hasError">
+    <li *ngFor="let movie of movies$ | async;let idx = index">
+      <span [attr.data-movies-raw-list-item]="idx">{{movie.title}} by {{ movie.director}} was released in
+        {{movie?.yearReleased || '(unknown)' }}</span>
+    </li>
+  </ul>
+</div>
